@@ -11,8 +11,10 @@ public class Main {
         System.out.println("Введите номера id");
         String ids = sc.nextLine().trim();
         sc.close();
-        Parser jacksonParser = new Parser();
-        jacksonParser.getObjectsInfo(date,ids);
+        Info info = new Info();
+        String type = "проезд";
+        info.getAddressObjectInfoByDateAndId(date,ids);
+        info.getFullAddressByType(type);
 
     }
 }
